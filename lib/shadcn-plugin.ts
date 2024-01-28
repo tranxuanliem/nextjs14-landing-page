@@ -1,4 +1,4 @@
-import plugin from 'tailwindcss/plugin';
+import plugin from 'tailwindcss/plugin'
 
 export const shadcnPlugin = plugin(
   // 1. Add CSS variables definition to the base layer
@@ -24,7 +24,7 @@ export const shadcnPlugin = plugin(
         '--border': '214.3 31.8% 91.4%',
         '--input': '214.3 31.8% 91.4%',
         '--ring': '203 90%, 39%',
-        '--radius': '0.5rem',
+        '--radius': '0.5rem'
       },
       '.dark': {
         '--background': '222.2 47.4% 11.2%',
@@ -47,60 +47,60 @@ export const shadcnPlugin = plugin(
         '--input': '217.2 32.6% 17.5%',
         '--ring': '224.3 76.3% 48%',
         '--fc-list-event-hover-bg-color': 'rgb(10, 120, 189)',
-        '--fc-neutral-bg-color': 'rgb(10, 120, 189)',
-      },
-    });
+        '--fc-neutral-bg-color': 'rgb(10, 120, 189)'
+      }
+    })
 
     addBase({
       '*': {
-        '@apply border-border': {},
+        '@apply border-border': {}
       },
       body: {
-        '@apply bg-background text-foreground': {},
-      },
-    });
+        '@apply bg-background text-foreground': {}
+      }
+    })
 
     addUtilities({
       // Animation intertion count
       '.animate-infinite': {
-        'animation-iteration-count': 'infinite',
+        'animation-iteration-count': 'infinite'
       },
       '.animate-once': {
-        'animation-iteration-count': '1',
+        'animation-iteration-count': '1'
       },
       '.animate-twice': {
-        'animation-iteration-count': '2',
+        'animation-iteration-count': '2'
       },
       '.animate-thrice': {
-        'animation-iteration-count': '3',
+        'animation-iteration-count': '3'
       },
       // Animation fill mode
       '.animate-run': {
-        'animation-play-state': 'running',
+        'animation-play-state': 'running'
       },
       '.animate-play': {
-        'animation-play-state': 'running',
+        'animation-play-state': 'running'
       },
       '.animate-stop': {
-        'animation-play-state': 'paused',
+        'animation-play-state': 'paused'
       },
       '.animate-pause': {
-        'animation-play-state': 'paused',
+        'animation-play-state': 'paused'
       },
       // Animation direction
       '.animate-normal': {
-        'animation-direction': 'normal',
+        'animation-direction': 'normal'
       },
       '.animate-reverse': {
-        'animation-direction': 'reverse',
+        'animation-direction': 'reverse'
       },
       '.animate-alternate': {
-        'animation-direction': 'alternate',
+        'animation-direction': 'alternate'
       },
       '.animate-alternate-reverse': {
-        'animation-direction': 'alternate-reverse',
-      },
-    });
+        'animation-direction': 'alternate-reverse'
+      }
+    })
   },
   // 2. Extend the Tailwind theme with themeable utilities
   {
@@ -109,8 +109,8 @@ export const shadcnPlugin = plugin(
         center: true,
         padding: '2rem',
         screens: {
-          '2xl': '1400px',
-        },
+          '2xl': '1400px'
+        }
       },
       extend: {
         colors: {
@@ -121,197 +121,197 @@ export const shadcnPlugin = plugin(
           foreground: 'hsl(var(--foreground))',
           primary: {
             DEFAULT: 'hsl(var(--primary))',
-            foreground: 'hsl(var(--primary-foreground))',
+            foreground: 'hsl(var(--primary-foreground))'
           },
           secondary: {
             DEFAULT: 'hsl(var(--secondary))',
-            foreground: 'hsl(var(--secondary-foreground))',
+            foreground: 'hsl(var(--secondary-foreground))'
           },
           destructive: {
             DEFAULT: 'hsl(var(--destructive))',
-            foreground: 'hsl(var(--destructive-foreground))',
+            foreground: 'hsl(var(--destructive-foreground))'
           },
           muted: {
             DEFAULT: 'hsl(var(--muted))',
-            foreground: 'hsl(var(--muted-foreground))',
+            foreground: 'hsl(var(--muted-foreground))'
           },
           accent: {
             DEFAULT: 'hsl(var(--accent))',
-            foreground: 'hsl(var(--accent-foreground))',
+            foreground: 'hsl(var(--accent-foreground))'
           },
           popover: {
             DEFAULT: 'hsl(var(--popover))',
-            foreground: 'hsl(var(--popover-foreground))',
+            foreground: 'hsl(var(--popover-foreground))'
           },
           card: {
             DEFAULT: 'hsl(var(--card))',
-            foreground: 'hsl(var(--card-foreground))',
-          },
+            foreground: 'hsl(var(--card-foreground))'
+          }
         },
         backgroundImage: {
-          login: "url('../public/bg-login.png')",
+          login: "url('../public/bg-login.png')"
         },
         borderRadius: {
           lg: 'var(--radius)',
           md: 'calc(var(--radius) - 2px)',
-          sm: 'calc(var(--radius) - 4px)',
+          sm: 'calc(var(--radius) - 4px)'
         },
         keyframes: {
           'accordion-down': {
             from: { height: '0' },
-            to: { height: 'var(--radix-accordion-content-height)' },
+            to: { height: 'var(--radix-accordion-content-height)' }
           },
           'accordion-up': {
             from: { height: 'var(--radix-accordion-content-height)' },
-            to: { height: '0' },
+            to: { height: '0' }
           },
           wiggle: {
             '0%, 100%': {
-              transform: 'rotate(-3deg)',
+              transform: 'rotate(-3deg)'
             },
             '50%': {
-              transform: 'rotate(3deg)',
-            },
+              transform: 'rotate(3deg)'
+            }
           },
           'wiggle-more': {
             '0%, 100%': {
-              transform: 'rotate(-12deg)',
+              transform: 'rotate(-12deg)'
             },
             '50%': {
-              transform: 'rotate(12deg)',
-            },
+              transform: 'rotate(12deg)'
+            }
           },
           'rotate-y': {
             '0%': {
-              transform: 'rotateY(360deg)',
+              transform: 'rotateY(360deg)'
             },
             '100%': {
-              transform: 'rotateY(0)',
-            },
+              transform: 'rotateY(0)'
+            }
           },
           'rotate-x': {
             '0%': {
-              transform: 'rotateX(360deg)',
+              transform: 'rotateX(360deg)'
             },
             '100%': {
-              transform: 'rotateX(0)',
-            },
+              transform: 'rotateX(0)'
+            }
           },
           jump: {
             '0%, 100%': {
-              transform: 'scale(100%)',
+              transform: 'scale(100%)'
             },
             '10%': {
-              transform: 'scale(80%)',
+              transform: 'scale(80%)'
             },
             '50%': {
-              transform: 'scale(120%)',
-            },
+              transform: 'scale(120%)'
+            }
           },
           'jump-in': {
             '0%': {
-              transform: 'scale(0%)',
+              transform: 'scale(0%)'
             },
             '80%': {
-              transform: 'scale(120%)',
+              transform: 'scale(120%)'
             },
             '100%': {
-              transform: 'scale(100%)',
-            },
+              transform: 'scale(100%)'
+            }
           },
           'jump-out': {
             '0%': {
-              transform: 'scale(100%)',
+              transform: 'scale(100%)'
             },
             '20%': {
-              transform: 'scale(120%)',
+              transform: 'scale(120%)'
             },
             '100%': {
-              transform: 'scale(0%)',
-            },
+              transform: 'scale(0%)'
+            }
           },
           shake: {
             '0%': {
-              transform: 'translateX(0rem)',
+              transform: 'translateX(0rem)'
             },
             '25%': {
-              transform: 'translateX(-1rem)',
+              transform: 'translateX(-1rem)'
             },
             '75%': {
-              transform: 'translateX(1rem)',
+              transform: 'translateX(1rem)'
             },
             '100%': {
-              transform: 'translateX(0rem)',
-            },
+              transform: 'translateX(0rem)'
+            }
           },
           fade: {
             '0%': {
-              opacity: '0',
+              opacity: '0'
             },
             '100%': {
-              opacity: '1',
-            },
+              opacity: '1'
+            }
           },
           'fade-down': {
             '0%': {
               opacity: '0',
-              transform: 'translateY(-2rem)',
+              transform: 'translateY(-2rem)'
             },
             '100%': {
               opacity: '1',
-              transform: 'translateY(0)',
-            },
+              transform: 'translateY(0)'
+            }
           },
           'fade-up': {
             '0%': {
               opacity: '0',
-              transform: 'translateY(2rem)',
+              transform: 'translateY(2rem)'
             },
             '100%': {
               opacity: '1',
-              transform: 'translateY(0)',
-            },
+              transform: 'translateY(0)'
+            }
           },
           'fade-left': {
             '0%': {
               opacity: '0',
-              transform: 'translateX(2rem)',
+              transform: 'translateX(2rem)'
             },
             '100%': {
               opacity: '1',
-              transform: 'translateX(0)',
-            },
+              transform: 'translateX(0)'
+            }
           },
           'fade-right': {
             '0%': {
               opacity: '0',
-              transform: 'translateX(-2rem)',
+              transform: 'translateX(-2rem)'
             },
             '100%': {
               opacity: '1',
-              transform: 'translateX(0)',
-            },
+              transform: 'translateX(0)'
+            }
           },
           'flip-up': {
             '0%': {
               transform: 'rotateX(90deg)',
-              transformOrigin: 'bottom',
+              transformOrigin: 'bottom'
             },
             '100%': {
               transform: 'rotateX(0)',
-              transformOrigin: 'bottom',
-            },
+              transformOrigin: 'bottom'
+            }
           },
           'flip-down': {
             '0%': {
               transform: 'rotateX(-90deg)',
-              transformOrigin: 'top',
+              transformOrigin: 'top'
             },
             '100%': {
               transform: 'rotateX(0)',
-              transformOrigin: 'top',
-            },
-          },
+              transformOrigin: 'top'
+            }
+          }
         },
         animation: {
           'accordion-down': 'accordion-down 0.2s ease-out',
@@ -330,9 +330,9 @@ export const shadcnPlugin = plugin(
           'fade-left': 'fade-left 1s both',
           'fade-right': 'fade-right 1s both',
           'flip-up': 'flip-up 1s both',
-          'flip-down': 'flip-down 1s both',
-        },
-      },
-    },
-  },
-);
+          'flip-down': 'flip-down 1s both'
+        }
+      }
+    }
+  }
+)

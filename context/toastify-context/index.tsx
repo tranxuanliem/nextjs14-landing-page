@@ -1,12 +1,12 @@
-'use client';
-import { handleMessage, type TMessage } from '@/helpers/toastify-helper';
-import { ReactNode, createContext, useContext } from 'react';
-import Swal from 'sweetalert2';
+'use client'
+import { handleMessage, type TMessage } from '@/helpers/toastify-helper'
+import { ReactNode, createContext, useContext } from 'react'
+import Swal from 'sweetalert2'
 
 const ToastifyContext = createContext({
   raiseErrorMessage: (message: TMessage) => {},
-  showSuccessMessage: (message: TMessage) => {},
-});
+  showSuccessMessage: (message: TMessage) => {}
+})
 
 const toast = (type: 'success' | 'error', message: TMessage) => {
   Swal.fire({
@@ -31,31 +31,27 @@ const toast = (type: 'success' | 'error', message: TMessage) => {
       cancelButton: '',
       loader: '',
       footer: '',
-      timerProgressBar: '',
-    },
-  });
-};
+      timerProgressBar: ''
+    }
+  })
+}
 
-export const ToastifyContextProvider = ({
-  children,
-}: {
-  children: ReactNode;
-}) => {
+export const ToastifyContextProvider = ({ children }: { children: ReactNode }) => {
   const raiseErrorMessage = (message: TMessage) => {
-    toast('error', message);
-  };
+    toast('error', message)
+  }
 
   const showSuccessMessage = (message: TMessage) => {
-    toast('success', message);
-  };
+    toast('success', message)
+  }
 
   return (
     <ToastifyContext.Provider value={{ raiseErrorMessage, showSuccessMessage }}>
       {children}
     </ToastifyContext.Provider>
-  );
-};
+  )
+}
 
-const useToastifyContext = () => useContext(ToastifyContext);
+const useToastifyContext = () => useContext(ToastifyContext)
 
-export default useToastifyContext;
+export default useToastifyContext
